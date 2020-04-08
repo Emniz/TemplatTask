@@ -32,5 +32,20 @@ public:
             throw out_of_range("Stack is empty");
         this->head--;
     }
+    void StackMerge(const Stack<T>& second);
 };
-
+template<typename T>
+void Stack<T>::StackMerge(const Stack<T>& second)
+{
+    T* merge = new T[size + second.size];
+    head = 0;
+    while (head < size) {
+        merge[head] = array[head];
+        head++;
+    }
+    while (head < size + second.size) {
+        merge[head] = second.array[head - size];
+        head++;
+    }
+    array = merge;
+}
