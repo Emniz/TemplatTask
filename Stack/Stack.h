@@ -20,5 +20,17 @@ public:
         this->array = new T[Stack.size];
         this->array = Stack.array;
     }
+    void push(T elem)
+    {
+        if (this->head >= this->size)
+            throw out_of_range("Stack is full");
+        array[this->head++] = elem;
+    }
+    void pop()
+    {
+        if (this->head <= 0)
+            throw out_of_range("Stack is empty");
+        this->head--;
+    }
 };
 
