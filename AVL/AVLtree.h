@@ -61,10 +61,10 @@ private:
 	{
 		int OldHeight = index->height;
 		index->MakeHeight();
-		int balance = index->Balance();
+		int balance = index->GetBalance();
 		if (balance > 1)
 		{
-			if (index->right->Balance() < 0)
+			if (index->right->GetBalance() < 0)
 				this->TurnLeft(index->right);
 			this->TurnRight(index);
 			if (index->height == OldHeight)
@@ -72,7 +72,7 @@ private:
 		}
 		else if (balance < -1)
 		{
-			if (index->left->Balance() > 0)
+			if (index->left->GetBalance() > 0)
 				this->TurnRight(index->left);
 			this->TurnLeft(index);
 			if (index->height == OldHeight)
