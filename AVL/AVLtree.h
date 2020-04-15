@@ -79,7 +79,6 @@ private:
 				this->ch = false;
 		}
 	}
-
 	void Insert(AVLNode<T>*& index, T data)
 	{
 		if (index == nullptr)
@@ -113,7 +112,6 @@ private:
 		temp->MakeHeight();
 		index = temp;
 	}
-
 	void TurnRight(AVLNode<T>*& index)
 	{
 		AVLNode<T>* temp;
@@ -123,6 +121,48 @@ private:
 		index->MakeHeight();
 		temp->MakeHeight();
 		index = temp;
+	}
+	void FindToDelete(AVLNode<T>*& replac, AVLNode<T>* index, AVLNode<T>*& temp)
+	{
+		if (replac->right != nullptr)
+		{
+			this->FindToDelete(replac->right, index, temp);
+			this->Balance(replac);
+		}
+		else
+		{
+			temp = replac;
+			index->data = replac->data;
+			replac = replac->left;
+		}
+	}
+	void Delete(AVLNode<T>*& index, T data)
+	{
+		AVLNode<T>* temp;
+		if (index != nullptr)
+		{
+			if (data < index->data)
+			{
+				this->Delete(index->left, data);
+				this->Balance(index);
+			}
+			else if (data > index->data)
+			{
+				this->Delete(index->right, data);
+				this->Balance(index);
+			}
+			else
+			{
+				temp = index;
+				if (index->right == nullptr)
+					index = index->left;
+				else if (index->left == nullptr)
+					index = index->right;
+				else
+					this->FindToDelete(index->left, index, temp);
+				delete temp;
+			}
+		}
 	}
 public:
 };
