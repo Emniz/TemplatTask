@@ -164,5 +164,38 @@ private:
 			}
 		}
 	}
+	void Dispose(AVLNode<T>* index)
+	{
+		if (index != nullptr)
+		{
+			if (index->left != nullptr)
+				this->Dispose(index->left);
+			if (index->right != nullptr)
+				this->Dispose(index->right);
+			delete index;
+		}
+	}
+	bool List(AVLNode<T>* index, T data)
+	{
+		if (index != nullptr)
+		{
+			if (data == index->data)
+				return true;
+			else if (data < index->data)
+				return this->List(index->left, data);
+			else if (data > index->data)
+				return this->List(index->right, data);
+		}
+		return false;
+	}
+	void Leaves(AVLNode<T>* indexTree, T* array, int& indexArr)
+	{
+		if (indexTree->left != nullptr)
+			Leaves(indexTree->left, array, indexArr);
+		array[indexArr] = indexTree->data;
+		indexArr++;
+		if (indexTree->right != nullptr)
+			Leaves(indexTree->right, array, indexArr);
+	}
 public:
 };
