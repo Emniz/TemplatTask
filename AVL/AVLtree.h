@@ -198,4 +198,45 @@ private:
 			Leaves(indexTree->right, array, indexArr);
 	}
 public:
+	AVLTree()
+	{
+		this->root = nullptr;
+		this->ch = false;
+		this->count = 0;
+	}
+	AVLTree(T data)
+	{
+		this->root = new AVLNode<T>(data);
+		this->ch = false;
+		this->count = 1;
+	}
+	~AVLTree()
+	{
+		this->Dispose(this->root);
+	}
+	void insert(T data)
+	{
+		this->Insert(this->root, data);
+		this->count++;
+	}
+	void Del(T data)
+	{
+		this->Delete(this->root, data);
+		this->count--;
+	}
+	T* Leaves()
+	{
+		T* array = new T[this->count];
+		int indexArray = 0;
+		Leaves(this->root, array, indexArray);
+		return array;
+	}
+	int getCount()
+	{
+		return this->count;
+	}
+	bool Search(T data)
+	{
+		return this->List(this->root, data);
+	}
 };
