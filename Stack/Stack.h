@@ -16,9 +16,9 @@ public:
         this->head = 0;
     }
     Stack(const Stack<T>& stack) {
-        this->head = Stack.head;
+        this->head = stack.head;
         this->array = new T[Stack.size];
-        this->array = Stack.array;
+        this->array = stack.array;
     }
     void push(T elem)
     {
@@ -31,6 +31,16 @@ public:
         if (this->head <= 0)
             throw out_of_range("Stack is empty");
         this->head--;
+    }
+    void print()
+    {
+        for (int i = 0; i < head; i++)
+            cout << array[i] << " ";
+        cout << endl;
+    }
+    ~Stack()
+    {
+        delete[] array;
     }
     void StackMerge(const Stack<T>& second);
 };
