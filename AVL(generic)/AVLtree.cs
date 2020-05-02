@@ -184,7 +184,7 @@ namespace AVL_generic_
                     this.Dispose(index.right);
             }
         }
-        void Leaves(AVLTree indexTree, T[] array, ref int indexArr)
+        void Leaves(AVLTree indexTree, T[] array, ref int indexArr)//вывод дерева
         {
             if (indexTree.left != null)
                 Leaves(indexTree.left, array, ref indexArr);

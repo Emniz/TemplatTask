@@ -1,0 +1,6 @@
+C:\Users\мв\Source\Repos\TemplatTask — копия\Stack(generic)\obj\Debug\Stack(generic).csprojAssemblyReference.cache
+C:\Users\мв\Source\Repos\TemplatTask — копия\Stack(generic)\bin\Debug\Stack(generic).exe.config
+C:\Users\мв\Source\Repos\TemplatTask — копия\Stack(generic)\bin\Debug\Stack(generic).exe
+C:\Users\мв\Source\Repos\TemplatTask — копия\Stack(generic)\bin\Debug\Stack(generic).pdb
+C:\Users\мв\Source\Repos\TemplatTask — копия\Stack(generic)\obj\Debug\Stack(generic).exe
+C:\Users\мв\Source\Repos\TemplatTask — копия\Stack(generic)\obj\Debug\Stack(generic).pdb
