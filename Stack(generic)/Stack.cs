@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stack_generic_
 {
-    class Stack<T> : ICloneable
+    class Stack<T>
     {
         T[] array;
         public int size;
@@ -54,14 +54,6 @@ namespace Stack_generic_
                 index++;
             }
             return merge;
-        }
-        public object Clone()
-        {
-            Stack<T> stack = new Stack<T>(this.array.Length);
-            stack.array = (T[])this.array.Clone();
-            stack.head = this.head;
-            stack.size = this.size;
-            return stack;
         }
     }
 }

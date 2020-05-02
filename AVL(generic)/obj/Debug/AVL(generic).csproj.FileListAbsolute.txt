@@ -4,3 +4,9 @@ C:\Users\мв\Source\Repos\TemplatTask\AVL(generic)\bin\Debug\AVL(generic).pdb
 C:\Users\мв\Source\Repos\TemplatTask\AVL(generic)\obj\Debug\AVL(generic).csprojAssemblyReference.cache
 C:\Users\мв\Source\Repos\TemplatTask\AVL(generic)\obj\Debug\AVL(generic).exe
 C:\Users\мв\Source\Repos\TemplatTask\AVL(generic)\obj\Debug\AVL(generic).pdb
+C:\Users\мв\Source\Repos\TemplatTask — копия\AVL(generic)\bin\Debug\AVL(generic).exe.config
+C:\Users\мв\Source\Repos\TemplatTask — копия\AVL(generic)\bin\Debug\AVL(generic).exe
+C:\Users\мв\Source\Repos\TemplatTask — копия\AVL(generic)\bin\Debug\AVL(generic).pdb
+C:\Users\мв\Source\Repos\TemplatTask — копия\AVL(generic)\obj\Debug\AVL(generic).csprojAssemblyReference.cache
+C:\Users\мв\Source\Repos\TemplatTask — копия\AVL(generic)\obj\Debug\AVL(generic).exe
+C:\Users\мв\Source\Repos\TemplatTask — копия\AVL(generic)\obj\Debug\AVL(generic).pdb
